@@ -1,0 +1,184 @@
+<!--
+  File: biodata_anka_iccong_saputra.html
+  Cara pakai: simpan isi file ini sebagai biodata_anka_iccong_saputra.html lalu buka di browser.
+  Ganti gambar profil dengan mengganti atribut src pada <img id="profile-pic">.
+-->
+
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Biodata — Anka Iccong Saputra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#0f172a; /* dark */
+      --bg2:#0b1020; /* darker */
+      --card:#0f172a;
+      --accent:#7c3aed; /* purple */
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.04);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: radial-gradient(ellipse at 10% 10%, rgba(124,58,237,0.12), transparent 10%),
+                  radial-gradient(ellipse at 90% 90%, rgba(14,165,233,0.06), transparent 10%),
+                  linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:980px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:22px;
+      padding:28px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:24px;
+      backdrop-filter: blur(6px) saturate(1.05);
+    }
+
+    /* Sidebar */
+    .sidebar{
+      background: linear-gradient(180deg,var(--glass),var(--glass-2));
+      border-radius:14px;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:16px;
+    }
+    #profile-pic{
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid rgba(255,255,255,0.06);
+      box-shadow: 0 8px 18px rgba(12,18,40,0.6);
+    }
+    h1.name{
+      margin:0;
+      font-size:1.4rem;
+      text-align:center;
+      letter-spacing:0.2px;
+    }
+    p.role{margin:4px 0 12px 0;font-weight:600;color:var(--muted);}
+
+    .info-list{width:100%;display:flex;flex-direction:column;gap:10px;margin-top:6px}
+    .info-item{display:flex;flex-direction:column;padding:8px 12px;border-radius:10px;background:transparent}
+    .info-item span.label{font-size:12px;color:var(--muted)}
+    .info-item span.value{font-weight:600}
+
+    .socials{display:flex;gap:8px;margin-top:6px}
+    .socials a{display:inline-flex;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);text-decoration:none;color:inherit;font-weight:600}
+
+    /* Main */
+    .main{
+      padding:18px 10px;
+      border-radius:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      min-height:260px;
+      display:flex;flex-direction:column;gap:14px;
+    }
+    .section{padding:12px;border-radius:12px;background:rgba(255,255,255,0.01);}
+    .section h2{margin:0 0 8px 0;font-size:1.05rem}
+    .bio-text{color:var(--muted);line-height:1.55}
+
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .skill{padding:8px;border-radius:10px;background:rgba(255,255,255,0.018);font-weight:600}
+
+    footer.note{margin-top:auto;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr;max-width:760px;padding:18px}
+      #profile-pic{width:140px;height:140px}
+      .two-col{grid-template-columns:1fr}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <aside class="sidebar" aria-label="Profil">
+      <!-- Ganti src dengan URL gambar Anda, atau path lokal seperti ./foto.jpg -->
+      <img id="profile-pic" src="foto.JPG" alt="Foto Anka Iccong Saputra">
+      <h1 class="name">Anka Iccong Saputra</h1>
+      <p class="role">Pelajar — SMK 1 Garut, 16 tahun</p>
+
+      <div class="info-list">
+        <div class="info-item">
+          <span class="label">Alamat</span>
+          <span class="value">Garut, Indonesia</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Sekolah</span>
+          <span class="value">SMK 1 Garut</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Ekskul</span>
+          <span class="value">Hockey &amp; PMR</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Hobi</span>
+          <span class="value">Main game</span>
+        </div>
+      </div>
+
+      <div class="socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="Email">Email</a>
+      </div>
+    </aside>
+
+    <section class="main">
+      <div class="section">
+        <h2>Tentang Saya</h2>
+        <p class="bio-text">Halo! Saya <strong>Anka Iccong Saputra</strong>, pelajar berusia 16 tahun di SMK 1 Garut. Saya suka mempelajari pemrograman, membuat proyek sederhana (termasuk proyek Roblox), serta bermain game di waktu luang. Saya aktif di eskul Hockey dan PMR.</p>
+      </div>
+
+      <div class="two-col">
+        <div class="section">
+          <h2>Pendidikan</h2>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li>SMK 1 Garut — Saat ini</li>
+            <li>SMP / SD — (isi sesuai riwayat)</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Keterampilan</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+            <div class="skill">HTML &amp; CSS</div>
+            <div class="skill">JavaScript (dasar)</div>
+            <div class="skill">Roblox Studio</div>
+            <div class="skill">Git &amp; GitHub</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Kontak</h2>
+        <p class="bio-text">Isi detail kontak di sini (email, nomor telepon, link sosial media). Contoh: <strong>email@example.com</strong></p>
+      </div>
+
+      <footer class="note">Template sederhana — mau saya tambahkan bagian proyek, portofolio, atau unduh PDF?</footer>
+    </section>
+  </div>
+</body>
+</html>
