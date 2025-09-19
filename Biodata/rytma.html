@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata Diri</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        max-width: 400px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      }
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 16px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+      }
+      .name {
+        font-size: 1.8rem;
+        margin-bottom: 4px;
+      }
+      .role {
+        font-size: 1rem;
+        color: #dcdcdc;
+        margin-bottom: 12px;
+      }
+      hr {
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 16px 0;
+      }
+      .info p {
+        margin: 8px 0;
+        font-size: 0.95rem;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #3498db;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      button:hover {
+        background: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="profile.jpg" class="profile-img" />
+      <h1 class="name">Rithma Ramadhan</h1>
+      <p class="role">Siswa | Web Developer</p>
+      <hr />
+      <div class="info">
+        <p><strong>Umur:</strong> 16 Tahun</p>
+        <p><strong>Kelas:</strong> XI RPL 2</p>
+        <p><strong>Email:</strong> rytmaramadhan@example.com</p>
+        <p><strong>Alamat:</strong> Kota/Kabupaten, Indonesia</p>
+      </div>
+      <button onclick="alert('Terima kasih sudah menghubungi saya! 😊')">Hubungi Saya</button>
+    </div>
+  </body>
+</html>
