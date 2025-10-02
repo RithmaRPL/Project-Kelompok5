@@ -3,86 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biodata Diri</title>
+    <title>Profil Modern Dark</title>
     <style>
-      body {
-        font-family: "Segoe UI", Tahoma, sans-serif;
-        background: linear-gradient(135deg, #2c3e50, #34495e);
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
+      /* Reset dasar */
+      * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
-      .card {
-        background: rgba(255, 255, 255, 0.08);
-        padding: 30px;
-        border-radius: 16px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-        max-width: 400px;
+
+      body {
+        background-color: #0d0d0d;
+        color: #f1f1f1;
+        line-height: 1.6;
+      }
+
+      header {
+        background: #1a1a1a;
+        padding: 20px;
         text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-bottom: 1px solid #333;
       }
-      .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+
+      header h1 {
+        font-size: 2rem;
+        color: #fff;
       }
-      .profile-img {
+
+      header p {
+        color: #aaa;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      .profile-card {
+        background: #1a1a1a;
+        border-radius: 12px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .profile-card img {
         width: 120px;
         height: 120px;
-        object-fit: cover;
         border-radius: 50%;
-        margin-bottom: 16px;
-        border: 3px solid rgba(255, 255, 255, 0.3);
+        border: 3px solid #555;
+        margin-bottom: 15px;
       }
-      .name {
-        font-size: 1.8rem;
-        margin-bottom: 4px;
-      }
-      .role {
-        font-size: 1rem;
-        color: #dcdcdc;
-        margin-bottom: 12px;
-      }
-      hr {
-        border: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        margin: 16px 0;
-      }
-      .info p {
-        margin: 8px 0;
-        font-size: 0.95rem;
-      }
-      button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        background: #3498db;
+
+      .profile-card h2 {
         color: #fff;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background 0.3s ease;
+        margin-bottom: 5px;
       }
-      button:hover {
-        background: #2980b9;
+
+      .profile-card p {
+        color: #bbb;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #0078ff;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background: #005fcb;
+      }
+
+      section {
+        margin-top: 50px;
+      }
+
+      section h3 {
+        border-left: 4px solid #0078ff;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .skills,
+      .contact {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      }
+
+      .skills ul,
+      .contact ul {
+        list-style: none;
+      }
+
+      .skills li,
+      .contact li {
+        margin: 10px 0;
+        color: #ccc;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        border-top: 1px solid #333;
+        color: #777;
       }
     </style>
   </head>
   <body>
-    <div class="card">
-      <img src="profile.jpg" class="profile-img" />
-      <h1 class="name">Rithma Ramadhan</h1>
-      <p class="role">Siswa | Web Developer</p>
-      <hr />
-      <div class="info">
-        <p><strong>Umur:</strong> 16 Tahun</p>
-        <p><strong>Kelas:</strong> XI RPL 2</p>
-        <p><strong>Email:</strong> rytmaramadhan@example.com</p>
-        <p><strong>Alamat:</strong> Kota/Kabupaten, Indonesia</p>
+    <header>
+      <h1>Profil Saya</h1>
+      <p>Web Developer | Designer | Creator</p>
+    </header>
+
+    <div class="container">
+      <div class="profile-card">
+        <img src="image1.jpeg" alt="Foto Profil" />
+        <h2>Nama Kamu</h2>
+        <p>Saya adalah seorang web developer dengan passion di bidang teknologi, desain, dan pengembangan website modern.</p>
+        <a href="#" class="btn">Hubungi Saya</a>
       </div>
-      <button onclick="alert('Terima kasih sudah menghubungi saya! 😊')">Hubungi Saya</button>
+
+      <section>
+        <h3>Keterampilan</h3>
+        <div class="skills">
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Vue, Laravel</li>
+            <li>UI/UX Design</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3>Kontak</h3>
+        <div class="contact">
+          <ul>
+            <li>Email: rytmaramadhanm@email.com</li>
+            <li>GitHub: github.com/RithmaRpl</li>
+          </ul>
+        </div>
+      </section>
     </div>
+
+    <footer>&copy; 2025 Nama Kamu. All Rights Reserved.</footer>
   </body>
 </html>
