@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biodata - Galaxy Theme</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .sky, .stars, .nebula {
+      position: fixed;
+      width: 100%; height: 100%;
+      top: 0; left: 0;
+      z-index: -1;
+    }
+
+    .stars {
+      background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+      opacity: 0.4;
+      animation: twinkle 20s linear infinite;
+    }
+
+    @keyframes twinkle {
+      from {background-position: 0 0;}
+      to {background-position: 1000px 1000px;}
+    }
+
+    .wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .card {
+      background: rgba(15, 20, 40, 0.9);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(100, 150, 255, 0.4);
+    }
+
+    .photo img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #8ab4f8;
+      box-shadow: 0 0 15px #6b8fff;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .glow {
+      color: #9fb8ff;
+      text-shadow: 0 0 10px #6b8fff, 0 0 20px #6b8fff;
+    }
+
+    .role {
+      text-align: center;
+      opacity: 0.85;
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .chip {
+      background: rgba(100, 120, 200, 0.2);
+      border: 1px solid rgba(150, 170, 255, 0.4);
+      border-radius: 20px;
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+
+    .cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(45deg, #6b8fff, #9fb8ff);
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(120, 150, 255, 0.7);
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 20px rgba(150, 180, 255, 0.9);
+      transform: scale(1.05);
+    }
+
+    .right-foot {
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sky"></div>
+  <div class="stars"></div>
+  <div class="nebula"></div>
+
+  <main class="wrap">
+    <article class="card">
+      <div style="text-align:center">
+       <figure class="photo">
+  <img id="photo" src="pfp.jpg" alt="Foto Profil">
+</figure>
+        <div style="margin-top:12px;opacity:0.9">Fullstack • Creative • Dreamer</div>
+      </div>
+
+      <section class="info">
+        <h1><span class="glow">Ikbal Kabilah</span></h1>
+        <div class="role">Nama Panggilan: Ikbal</div>
+
+        <div class="meta">
+          <div class="chip">📍 Garut,27-juli-2008</div>
+          <div class="chip">🏠 Sindang wargi,Gg.perintis kemerdekaan</div>
+          <div class="chip">🎯 CEO</div>
+        </div>
+
+        <div class="cols">
+          <div class="box">
+            <h3>About Me</h3>
+            <p>Seperti luasnya galaksi, saya selalu ingin belajar dan menjelajah. Yeah sometime's related to good or bad things.</p>
+          </div>
+
+          <div class="box">
+            <h3>Kontak</h3>
+            <p>Email: <strong>ikbalmuhamad443@gmail.com</strong><br>Telepon: <strong>08999058731</strong></p>
+          </div>
+
+          <div class="box">
+            <h3>Hobi</h3>
+            <p>- Menggambar<br>- Cooking<br>- Baca buku Novel/fiksi</p>
+          </div>
+
+          <div class="box">
+            <h3>Motto</h3>
+            <p>"Bersinar di tengah kegelapan,seperti bintang di angkasa."</p>
+          </div>
+        </div>
+
+  <script>
+    function downloadVCard(){
+      const name = 'Ikbal Kabilah';
+      const nickname = 'Ikbal';
+      const email = 'email@contoh.com';
+      const phone = '0812xxxxxxx';
+      const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:${name}\nN:${name};;;;\nNICKNAME:${nickname}\nTEL;TYPE=CELL:${phone}\nEMAIL:${email}\nEND:VCARD`;
+      const blob = new Blob([vcard], {type: 'text/vcard'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'Ikbal_Kabilah.vcf'; document.body.appendChild(a); a.click(); a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
